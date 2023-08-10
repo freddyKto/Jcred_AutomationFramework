@@ -1,0 +1,53 @@
+package object_locators;
+import java.util.HashMap;
+
+public class LandingPageLocators {
+
+    private HashMap<String, String> Land_Page;
+
+    public LandingPageLocators() {
+        Land_Page = new HashMap<>();
+
+        // Lading
+        Land_Page.put("txtHomeSearch", "//*[@id=\"homeText\"]");
+        Land_Page.put("btnRunBursary", "//a[contains(text(),'Click here if you run a bursary')]");
+        Land_Page.put("btbLogo", "//*[@id=\"sectionsNav\"]/div/div[1]/a/img");
+        Land_Page.put("btnWorkshops", "//a[contains(text(),'Workshops')]");
+        Land_Page.put("btnAboutUs", "//*[@id=\"sectionsNav\"]/div/div[2]/ul/li[2]/a");
+
+        // registration form
+        Land_Page.put("btnTuteeSignUp", "//a[contains(text(),'Tutee Sign Up')]");
+        Land_Page.put("btnTutorSignUp", "//a[contains(text(),'Tutor Sign Up')]");
+        Land_Page.put("txtTuteeFname", "//input[@id='fName']");
+        Land_Page.put("txtTuteeSname", "//input[@id='sName']");
+        Land_Page.put("txtRace", "//select[@id='raceslst']");
+        Land_Page.put("btnPrevious", "//button[@id='prevBtn']");
+        Land_Page.put("btnNext", "//button[@id='nextBtn']");
+        Land_Page.put("txtInstitution", "//select[@id='sa']");
+        Land_Page.put("txtEmail", "//input[@id='emailId']");
+        Land_Page.put("txtContactNo", "//input[@id='cNumber']");
+        Land_Page.put("txtSpoken", "");
+        Land_Page.put("txtWritten", "");
+
+        // Drop down
+        Land_Page.put("selectSupport", "//a[contains(text(),'Support')]");
+        Land_Page.put("btnTermsConditions", "//*[@id=\"sectionsNav\"]/div/div[2]/ul/li[3]/div/a[1]");
+        Land_Page.put("btnFaq", "//i[contains(text(),'layers')]");
+        Land_Page.put("btnContactUS", "//i[contains(text(),'content_paste')]");
+
+        // login form
+        Land_Page.put("btnLogin", "Login");
+        Land_Page.put("txtEmailAddressLogin", "//input[@type=\"email\"]");
+        Land_Page.put("txtPasswordLogin", "//*[@id=\"inputPassword\"]");
+        Land_Page.put("btnForgotPassword", "//a[contains(text(),'Forgot password?')]");
+        Land_Page.put("btnLoginLogin", "//input[@value=\"Login\"]");
+    }
+
+
+    public String getLocator(String key) {
+        return Land_Page.get(key);
+
+
+    }
+}
+
