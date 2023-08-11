@@ -17,31 +17,33 @@ public class LoginTest extends BaseTest {
          public LoginTest() {
         super();
         loginPage = new LoginPage();
-      }
+        excelDataProvider = new ExcelDataProvider("C:\\Users\\Freddy\\Desktop\\simplytutors_testcases.xlsx");
 
-          @Test(groups = { "Click Login button" })
+         }
+
+          @Test(groups = { "Click Login button" }, priority = 1)
          public void TC001_LoginB() {
          loginPage.goToLoginPage();
       }
 
 
-         @Test(groups = { "Enter email" })
+         @Test(groups = { "Enter email" }, priority = 2)
          public void TC002_EnterMail() throws IOException {
-             Object[][] data = excelDataProvider.getTestData("Book1");
-             String email = (String) data[0][1];
+             Object[][] data = excelDataProvider.getTestData("simplytutors_testcases.xlsx");
+             String email = (String) data[10][7];
              loginPage.enterEmailAddressLogin(email);
      }
 
 
-         @Test(groups = { "Enter password" })
+         @Test(groups = { "Enter password" }, priority = 3)
          public void TC003_EnterPassword() throws IOException {
-             Object[][] data = excelDataProvider.getTestData("Book1");
-             String password = (String) data[1][1];
+             Object[][] data = excelDataProvider.getTestData("simplytutors_testcases.xlsx");
+             String password = (String) data[11][7];
              loginPage.enterPasswordLogin(password);
      }
 
 
-         @Test(groups = { "Click signing" })
+         @Test(groups = { "Click signing" }, priority = 4)
          public void TC004_ClickLogin() {
 
              loginPage.clickLoginLogin();

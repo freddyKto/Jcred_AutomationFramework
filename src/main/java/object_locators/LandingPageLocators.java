@@ -43,7 +43,10 @@ public class LandingPageLocators {
         Land_Page.put("txtEmailAddressLogin", "//input[@type=\"email\"]");
         Land_Page.put("txtPasswordLogin", "//*[@id=\"inputPassword\"]");
         Land_Page.put("btnForgotPassword", "//a[contains(text(),'Forgot password?')]");
-        Land_Page.put("btnLoginLogin", "//input[@value=\"Login\"]");
+        Land_Page.put("btnLoginLogin", "div.body-content:nth-child(2) div.col-md-8:nth-child(2)" +
+                      " div.main.main-raised.col-xs-10.col-sm-10.col-md-10.col-lg-10.centered-form " +
+                      "div.col-md-10 fieldset:nth-child(4) form:nth-child(1) div.row:nth-child(4) div.col-lg-12 >" +
+                      " input.btn.btn-primary:nth-child(1)");
     }
 
 

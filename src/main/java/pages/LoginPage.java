@@ -29,12 +29,12 @@ public class LoginPage extends BaseTest {
 
     public void enterPasswordLogin(String password)
     {
-        driver.findElement(By.xpath(landingPageLocators.getLocator("txtPasswordLogin"))).sendKeys(password);
+        BaseTest.driver.findElement(By.xpath(landingPageLocators.getLocator("txtPasswordLogin"))).sendKeys(password);
     }
 
     public void clickLoginLogin()
     {
-        driver.findElement(By.xpath(landingPageLocators.getLocator("btnLoginLogin"))).click();
+        BaseTest.driver.findElement(By.cssSelector(landingPageLocators.getLocator("btnLoginLogin"))).click();
     }
 
 }
