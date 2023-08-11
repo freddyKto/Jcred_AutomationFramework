@@ -17,7 +17,7 @@ public class LoginPage extends BaseTest {
 
     public void goToLoginPage()
     {
-        BaseTest.driver.findElement(By.xpath(landingPageLocators.getLocator("btnTuteeSignUp"))).click();
+        BaseTest.driver.findElement(By.cssSelector(landingPageLocators.getLocator("btnLogin"))).click();
 
     }
 

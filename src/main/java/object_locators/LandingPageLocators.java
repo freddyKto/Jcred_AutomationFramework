@@ -36,7 +36,10 @@ public class LandingPageLocators {
         Land_Page.put("btnContactUS", "//i[contains(text(),'content_paste')]");
 
         // login form
-        Land_Page.put("btnLogin", "Login");
+        Land_Page.put("btnLogin", "nav.navbar.navbar-color-on-scroll.navbar-transparent." +
+                "fixed-top.navbar-expand-lg:nth-child(4) div.container div.collapse.navbar-collapse ul.navbar-nav.ml-auto ul" +
+                ".navbar-nav.nav.secondary:nth-child(4) li.cta:nth-child(1) > a.btn.btn-success.mar-5.nav-link");
+
         Land_Page.put("txtEmailAddressLogin", "//input[@type=\"email\"]");
         Land_Page.put("txtPasswordLogin", "//*[@id=\"inputPassword\"]");
         Land_Page.put("btnForgotPassword", "//a[contains(text(),'Forgot password?')]");
