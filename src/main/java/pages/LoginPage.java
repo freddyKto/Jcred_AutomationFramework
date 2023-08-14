@@ -3,7 +3,6 @@ package pages;
 import object_locators.LandingPageLocators;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.PageFactory;
 import utilities.BaseTest;
 
 public class LoginPage extends BaseTest {

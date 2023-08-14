@@ -20,14 +20,21 @@ public class LandingPageLocators {
         Land_Page.put("btnTutorSignUp", "//a[contains(text(),'Tutor Sign Up')]");
         Land_Page.put("txtTuteeFname", "//input[@id='fName']");
         Land_Page.put("txtTuteeSname", "//input[@id='sName']");
-        Land_Page.put("txtRace", "//select[@id='raceslst']");
+        Land_Page.put("Sele_Race", "//select[@id='raceslst']");
         Land_Page.put("btnPrevious", "//button[@id='prevBtn']");
         Land_Page.put("btnNext", "//button[@id='nextBtn']");
         Land_Page.put("txtInstitution", "//select[@id='sa']");
         Land_Page.put("txtEmail", "//input[@id='emailId']");
         Land_Page.put("txtContactNo", "//input[@id='cNumber']");
-        Land_Page.put("txtSpoken", "");
-        Land_Page.put("txtWritten", "");
+
+        Land_Page.put("txtSpoken1", "#languageslstspoken1");
+        Land_Page.put("txtSpoken2", "#languageslstspoken2");
+        Land_Page.put("txtSpoken3", "#languageslstspoken2");
+        Land_Page.put("txtWritten1", "#languageslstwritten1");
+        Land_Page.put("txtWritten2", "#languageslstwritten2");
+        Land_Page.put("txtWritten3", "#languageslstwritten3");
+        Land_Page.put("txtNewPassword", "#languageslstwritten3");
+        Land_Page.put("Chk_box", "#t-agreement-checkbox");
 
         // Drop down
         Land_Page.put("selectSupport", "//a[contains(text(),'Support')]");

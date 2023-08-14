@@ -30,7 +30,8 @@ public class BaseTest {
 
          @AfterClass(alwaysRun=true)
          public void tearDownMain() {
-             DriverManager.closeDriver();
+
+           DriverManager.closeDriver();
          }
 
     public String getScreenshot(String testCaseName, WebDriver driver) throws IOException {
