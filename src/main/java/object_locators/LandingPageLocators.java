@@ -18,12 +18,13 @@ public class LandingPageLocators {
         // registration form
         Land_Page.put("btnTuteeSignUp", "//a[contains(text(),'Tutee Sign Up')]");
         Land_Page.put("btnTutorSignUp", "//a[contains(text(),'Tutor Sign Up')]");
+        Land_Page.put("txtTutorSName", "//input[@id='Srname']");
         Land_Page.put("txtTuteeFname", "//input[@id='fName']");
         Land_Page.put("txtTuteeSname", "//input[@id='sName']");
         Land_Page.put("Sele_Race", "//select[@id='raceslst']");
         Land_Page.put("btnPrevious", "//button[@id='prevBtn']");
         Land_Page.put("btnNext", "//button[@id='nextBtn']");
-        Land_Page.put("txtInstitution", "//select[@id='sa']");
+        Land_Page.put("Sele_Institution", "//select[@id='sa']");
         Land_Page.put("txtEmail", "//input[@id='emailId']");
         Land_Page.put("txtContactNo", "//input[@id='cNumber']");
 

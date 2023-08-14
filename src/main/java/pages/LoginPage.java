@@ -7,7 +7,6 @@ import utilities.BaseTest;
 
 public class LoginPage extends BaseTest {
 
-    private WebDriver driver;
     private LandingPageLocators landingPageLocators;
     public LoginPage() {
 
