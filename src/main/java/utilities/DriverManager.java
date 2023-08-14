@@ -5,6 +5,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
 
 public class DriverManager {
 
@@ -21,16 +23,21 @@ public class DriverManager {
     }
 
     private static WebDriver createDriver(String browserName) {
-        if (browserName.equalsIgnoreCase("chrome")) {
-            chromeOptions = new ChromeOptions();
-            chromeOptions.addArguments("--start-maximized");
-            return new ChromeDriver(chromeOptions);
-        } else if (browserName.equalsIgnoreCase("firefox")) {
-            return new FirefoxDriver();
-        } else if (browserName.equalsIgnoreCase("IE")) {
-            return new InternetExplorerDriver();
+        switch (browserName.toLowerCase()) {
+            case "chrome":
+                chromeOptions = new ChromeOptions();
+                chromeOptions.addArguments("--start-maximized");
+                chromeOptions.addArguments("incognito");
+
+                return new ChromeDriver(chromeOptions);
+            case "firefox":
+
+                return new FirefoxDriver();
+            case "ie":
+                return new InternetExplorerDriver();
+            default:
+                throw new IllegalArgumentException("Invalid browser name: " + browserName);
         }
-        return null;
     }
 
     public static void closeDriver() {
