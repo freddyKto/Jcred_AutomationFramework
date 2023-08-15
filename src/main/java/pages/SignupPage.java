@@ -50,12 +50,12 @@ public class SignupPage extends BaseTest {
 
     public void clickPrevious()
     {
-        BaseTest.driver.findElement(By.cssSelector(landingPageLocators.getLocator("btnNext"))).click();
+        BaseTest.driver.findElement(By.xpath(landingPageLocators.getLocator("btnNext"))).click();
     }
 
     public void clickNext()
     {
-        BaseTest.driver.findElement(By.cssSelector(landingPageLocators.getLocator("btnNext"))).click();
+        BaseTest.driver.findElement(By.xpath(landingPageLocators.getLocator("btnNext"))).click();
     }
 
 
@@ -75,6 +75,43 @@ public class SignupPage extends BaseTest {
     {
         BaseTest.driver.findElement(By.xpath(landingPageLocators.getLocator("txtContactNo"))).sendKeys(ContactNo);
     }
+
+
+    public void selectSpoken1(String ContactNo)
+    {
+        BaseTest.driver.findElement(By.cssSelector(landingPageLocators.getLocator("txtSpoken1"))).sendKeys(ContactNo);
+    }
+
+
+    public void selectSpoken2(String ContactNo)
+    {
+        BaseTest.driver.findElement(By.cssSelector(landingPageLocators.getLocator("txtSpoken2"))).sendKeys(ContactNo);
+    }
+
+
+    public void selectSpoken3(String ContactNo)
+    {
+        BaseTest.driver.findElement(By.cssSelector(landingPageLocators.getLocator("txtSpoken3"))).sendKeys(ContactNo);
+    }
+
+
+    public void selectWritten1(String ContactNo)
+    {
+        BaseTest.driver.findElement(By.cssSelector(landingPageLocators.getLocator("txtWritten1"))).sendKeys(ContactNo);
+    }
+
+
+    public void electWritten2(String ContactNo)
+    {
+        BaseTest.driver.findElement(By.cssSelector(landingPageLocators.getLocator("txtWritten2"))).sendKeys(ContactNo);
+    }
+
+
+    public void electWritten3(String ContactNo)
+    {
+        BaseTest.driver.findElement(By.cssSelector(landingPageLocators.getLocator("txtWritten3"))).sendKeys(ContactNo);
+    }
+
 
 
 
