@@ -28,14 +28,6 @@ public class LandingPageLocators {
         Land_Page.put("txtEmail", "//input[@id='emailId']");
         Land_Page.put("txtContactNo", "//input[@id='cNumber']");
 
-        Land_Page.put("txtSpoken1", "#languageslstspoken1");
-        Land_Page.put("txtSpoken2", "#languageslstspoken2");
-        Land_Page.put("txtSpoken3", "#languageslstspoken2");
-        Land_Page.put("txtWritten1", "#languageslstwritten1");
-        Land_Page.put("txtWritten2", "#languageslstwritten2");
-        Land_Page.put("txtWritten3", "#languageslstwritten3");
-        Land_Page.put("txtNewPassword", "#languageslstwritten3");
-        Land_Page.put("Chk_box", "#t-agreement-checkbox");
 
         // Drop down
         Land_Page.put("selectSupport", "//a[contains(text(),'Support')]");
