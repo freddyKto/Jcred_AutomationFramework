@@ -18,6 +18,7 @@ public class DriverManager {
             driver = createDriver(browserName);
             driver.manage().window().maximize();
             driver.manage().deleteAllCookies();
+
         }
         return driver;
     }
