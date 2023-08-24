@@ -22,7 +22,7 @@ public class BaseTest {
 
 
          @BeforeClass(alwaysRun=true)
-         public void launchApplication() throws InterruptedException {
+         public void launchApplication(){
              driver = DriverManager.getDriver("chrome");
              landingPage = new LandingPage(driver);
              landingPage.goTo();
