@@ -23,7 +23,7 @@ public class BaseTest {
 
          @BeforeClass(alwaysRun=true)
          public void launchApplication(){
-             driver = DriverManager.getDriver("chrome");
+             driver = DriverManager.getDriver("firefox");
              landingPage = new LandingPage(driver);
              landingPage.goTo();
         }
@@ -31,7 +31,7 @@ public class BaseTest {
          @AfterClass(alwaysRun=true)
          public void tearDownMain() {
 
-           DriverManager.closeDriver();
+//           DriverManager.closeDriver();
          }
 
     public String getScreenshot(String testCaseName, WebDriver driver) throws IOException {

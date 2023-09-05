@@ -1,20 +1,21 @@
 package object_locators;
-
 import java.util.HashMap;
-import java.util.Map;
 
 public class TuteePageLocators {
 
-    public static void SetPage_TuteePage() {
+    private HashMap<String, String> TuteeDashboard_page;
 
-//
-//        Map<String, String> Tutee_page = new HashMap<>();
-//
-//        Tutee_page.put("","");
-//        Tutee_page.put("","");
-//        Tutee_page.put("","");
-//
-//        WebDri.page_objects = Tutee_page;
+    public TuteePageLocators() {
+        TuteeDashboard_page = new HashMap<>();
+
+        TuteeDashboard_page.put("btnReqLesson", "//button[@id='reqLesson']");
+
+
+    }
+
+    public String getLocator(String key) {
+        return TuteeDashboard_page.get(key);
+
 
     }
 }
