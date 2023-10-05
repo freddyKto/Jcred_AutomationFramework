@@ -1,11 +1,16 @@
 package utilities;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.ie.InternetExplorerOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
+
+import java.util.Arrays;
 
 
 public class DriverManager {
@@ -26,16 +31,25 @@ public class DriverManager {
     private static WebDriver createDriver(String browserName) {
         switch (browserName.toLowerCase()) {
             case "chrome":
+                System.setProperty("web-driver.chrome.driver", "C:\\Users\\Freddy\\Desktop\\Automation Workspace\\Selenium framework\\drivers");
                 chromeOptions = new ChromeOptions();
                 chromeOptions.addArguments("--start-maximized");
-                chromeOptions.addArguments("incognito");
+                chromeOptions.addArguments("--incognito");
+
 
                 return new ChromeDriver(chromeOptions);
             case "firefox":
+                System.setProperty("web-driver.gecko.driver", "path/to/geckodriver");
+                FirefoxOptions firefoxOptions = new FirefoxOptions();
+                firefoxOptions.addArguments("-private");
+                return new FirefoxDriver(firefoxOptions);
 
-                return new FirefoxDriver();
             case "ie":
-                return new InternetExplorerDriver();
+                System.setProperty("web-driver.ie.driver", "path/to/IEDriverServer.exe");
+                InternetExplorerOptions ieOptions = new InternetExplorerOptions();
+                ieOptions.ignoreZoomSettings();
+                return new InternetExplorerDriver(ieOptions);
+
             default:
                 throw new IllegalArgumentException("Invalid browser name: " + browserName);
         }

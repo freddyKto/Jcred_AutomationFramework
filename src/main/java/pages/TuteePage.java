@@ -4,10 +4,12 @@ import object_locators.LandingPageLocators;
 import object_locators.TuteePageLocators;
 import org.openqa.selenium.By;
 
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 
 import org.openqa.selenium.support.ui.Select;
 import utilities.BaseTest;
+import java.util.List;
 import java.time.LocalDate;
 
 
@@ -28,9 +30,17 @@ public class TuteePage extends BaseTest {
         WebElement searchBox = driver.findElement(By.xpath(landingPageLocators.getLocator("txtHomeSearch")));
         searchBox.sendKeys(tutorName);
         Thread.sleep(5000);
-        driver.findElement(By.xpath("(//strong[contains(text(), '"+tutorName+"')])[4]")).click();
 
-            }
+        List<WebElement> elements = driver.findElements(By.xpath("//strong[text()='" + tutorName + "']"));
+
+        if (elements.size() > 0) {
+            elements.get(0).click(); // Click the first matching element
+        } else {
+            throw new NoSuchElementException("Element with text '" + tutorName + "' not found.");
+        }
+
+    }
+
 
         public void clickRequestLesson() throws Exception
         {
@@ -61,37 +71,46 @@ public class TuteePage extends BaseTest {
             WebElement datePicker = driver.findElement(dropdownLocator);
             datePicker.sendKeys(dateToSelect.toString());
 
-        } else if (locatorKey.equals("timeDropdown")) {
-            Select timeDropdown = new Select(driver.findElement(dropdownLocator));
-            timeDropdown.selectByVisibleText(timeOfDay);
+        } else if (locatorKey.equals("timeOfTheDay")) {
+            Select dropdown = new Select(driver.findElement(dropdownLocator));
+            dropdown.selectByVisibleText(timeOfDay);
 
         } else if (locatorKey.equals("alternateDate")) {
             WebElement datePicker = driver.findElement(dropdownLocator);
             datePicker.sendKeys(dateToSelect.toString());
 
-        } else if (locatorKey.equals("alternateTime")) {
-            Select timeDropdown = new Select(driver.findElement(dropdownLocator));
-            timeDropdown.selectByVisibleText(timeOfDay);
+        } else if (locatorKey.equals("alternate_timeOfTheDay")) {
+            Select dropdown = new Select(driver.findElement(dropdownLocator));
+            dropdown.selectByValue(timeOfDay);
+
         } else {
             System.out.println("Dropdown not recognized.");
         }
     }
 
-      public void enterTextIntoFields(By locator1, String text1, By locator2, String text2, By locator3, String text3) {
-        WebElement AreaOfDifficulty = driver.findElement(locator1);
-        WebElement LessonExpectation = driver.findElement(locator2);
-        WebElement Average = driver.findElement(locator3);
 
-        AreaOfDifficulty.clear();
-        AreaOfDifficulty.sendKeys(text1);
-
-        LessonExpectation.clear();
-        LessonExpectation.sendKeys(text2);
-
-        Average.clear();
-        Average.sendKeys(text3);
+    public void enterAreaOfDifficulty(String text) {
+        WebElement areaOfDiff = driver.findElement(By.xpath(tuteePageLocators.getLocator("AreaOfDiff")));
+        areaOfDiff.clear();
+        areaOfDiff.sendKeys(text);
     }
 
+    public void enterLessonExpectation(String text) {
+        WebElement lessonExpectation = driver.findElement(By.xpath(tuteePageLocators.getLocator("LessonExpectation")));
+        lessonExpectation.clear();
+        lessonExpectation.sendKeys(text);
+    }
+
+    public void enterAverageToDate(String text) {
+        WebElement lessonExpectation = driver.findElement(By.xpath(tuteePageLocators.getLocator("YouBursaryProvider")));
+        lessonExpectation.clear();
+        lessonExpectation.sendKeys(text);
+    }
+
+
+    public void submitRequest() {
+        driver.findElement(By.xpath(tuteePageLocators.getLocator("btnSubmitReq"))).click();
+    }
 }
 
 

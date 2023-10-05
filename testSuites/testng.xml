@@ -8,7 +8,7 @@
 	<test name="Testing">
 		<!-- <groups> <run> <exclude name = "Functionality" /> </run> </groups> -->
 		<classes>
-			<class name="Tests.TestingBooking"></class>
+			<class name="Tests.TestingTuteeBooking"></class>
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
