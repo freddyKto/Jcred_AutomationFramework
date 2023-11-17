@@ -20,7 +20,7 @@ public class LandingPage extends BaseTest {
 
     public void goTo()
     {
-        driver.get("https://simplytutorsza-dev.azurewebsites.net/");
+        driver.get("http://qa.j-cred.co.za/#/login");
     }
 
 

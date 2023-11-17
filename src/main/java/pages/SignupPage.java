@@ -2,7 +2,6 @@ package pages;
 
 import object_locators.LandingPageLocators;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import utilities.BaseTest;
 
 public class SignupPage extends BaseTest {

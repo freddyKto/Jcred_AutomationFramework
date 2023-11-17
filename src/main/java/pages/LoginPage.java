@@ -13,15 +13,10 @@ public class LoginPage extends BaseTest {
         landingPageLocators = new LandingPageLocators();
     }
 
-    public void goToLoginPage()
-    {
-        BaseTest.driver.findElement(By.cssSelector(landingPageLocators.getLocator("btnLogin"))).click();
-    }
-
-    public void login(String email, String password) {
-        WebElement emailInput = BaseTest.driver.findElement(By.xpath(landingPageLocators.getLocator("txtEmailAddressLogin")));
-        WebElement passwordInput = BaseTest.driver.findElement(By.xpath(landingPageLocators.getLocator("txtPasswordLogin")));
-        WebElement loginButton = BaseTest.driver.findElement(By.cssSelector(landingPageLocators.getLocator("btnLoginLogin")));
+    public void Login(String email, String password) {
+        WebElement emailInput = BaseTest.driver.findElement(By.xpath(landingPageLocators.getLocator("txtEmail")));
+        WebElement passwordInput = BaseTest.driver.findElement(By.xpath(landingPageLocators.getLocator("txtPassword")));
+        WebElement loginButton = BaseTest.driver.findElement(By.xpath(landingPageLocators.getLocator("btnLogin")));
 
         emailInput.sendKeys(email);
         passwordInput.sendKeys(password);
