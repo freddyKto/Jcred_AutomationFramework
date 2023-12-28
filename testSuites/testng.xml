@@ -7,8 +7,8 @@
 	</listeners>
 	<test name="Testing">
 		<!-- <groups> <run> <exclude name = "Functionality" /> </run> </groups> -->
-		<classes>
-			<class name="Tests.TestingTuteeBooking"></class>
+		<classes >
+			<class name="Tests.PersonTraceTest"></class>
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

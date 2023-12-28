@@ -1,6 +1,5 @@
 package utilities;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -28,10 +27,11 @@ public class DriverManager {
     private static WebDriver createDriver(String browserName) {
         switch (browserName.toLowerCase()) {
             case "chrome":
-                System.setProperty("web-driver.chrome.driver", "C:\\Users\\Freddy\\Desktop\\Automation Workspace\\Selenium framework\\drivers");
+                System.setProperty("webdriver.chrome.driver", "C:\\Users\\Freddy\\Desktop\\Automation Workspace\\Selenium framework\\drivers\\chromedriver.exe");
                 chromeOptions = new ChromeOptions();
                 chromeOptions.addArguments("--start-maximized");
                 chromeOptions.addArguments("--incognito");
+
 
 
                 return new ChromeDriver(chromeOptions);

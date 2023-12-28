@@ -20,7 +20,7 @@ public class LandingPage extends BaseTest {
 
     public void goTo()
     {
-        driver.get("http://qa.j-cred.co.za/#/login");
+        driver.get("http://qa.j-cred.co.za/");
     }
 
 

@@ -15,7 +15,7 @@ import java.io.IOException;
 
 
 public class BaseTest {
-        protected static WebDriver driver;
+        public static WebDriver driver;
 
         public LandingPage landingPage;
 
@@ -23,7 +23,7 @@ public class BaseTest {
 
          @BeforeClass(alwaysRun=true)
          public void launchApplication(){
-             driver = DriverManager.getDriver("firefox");
+             driver = DriverManager.getDriver("chrome");
              landingPage = new LandingPage(driver);
              landingPage.goTo();
         }
