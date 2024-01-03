@@ -9,13 +9,12 @@ public class Person_traceTest extends BaseTest {
     PersonRecordsPage personRecordsPage;
     LoginPage loginPage;
 
-    public Person_traceTest() throws Exception {
+    public Person_traceTest()  {
         super();
 
         loginPage = new LoginPage();
 
     }
-
     // Testing the person trace by Name
     @Test
     public void Login() {
