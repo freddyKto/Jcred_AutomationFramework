@@ -1,7 +1,7 @@
 package pages;
 
 import org.openqa.selenium.By;
-import utilities.Utils;
+import utils.Utils;
 import static utilities.BaseTest.driver;
 
 
@@ -137,15 +137,16 @@ public class PersonRecordsPage {
 
     public void personVerbyName(){
         System.out.println("Performing person Verification by name ");
-        webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='reference']"), "QA_testing");
+        webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='reference']"), "PersonVerbyName");
         webDriverUtils.clickElement(By.xpath("//*[@id=\"mat-select-value-3\"]/span"));
-        webDriverUtils.clickElement(By.xpath("(//span[@class='mat-option-text'])[1]"));
+        webDriverUtils.clickElement(By.xpath("//span[text()=' Person Verification ']"));
 
         webDriverUtils.clickElement(By.xpath("//div[@class='mat-form-field-infix ng-tns-c46-34']"));
         webDriverUtils.clickElement(By.xpath("//span[text()=' Name ']"));
 
 
-        webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='firstname']"),"9808196131087");
+        webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='firstname']"),"Thoriso");
+        webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='surname']"),"rangata");
 
         // terms and conditions checks
         webDriverUtils.checkCheckbox(By.xpath("(//span[@class='mat-checkbox-inner-container'])[1]"));
@@ -159,20 +160,23 @@ public class PersonRecordsPage {
 
         // Perform search
         webDriverUtils.clickElement(By.xpath("//span[text()=' Perform Search ']"));
+
+        // Viewing more
+        webDriverUtils.clickElement(By.xpath("//*[@id=\"ViewMore\"]/span[1]"));
     }
 
 
     public void personVerbyID(){
         System.out.println("Performing person verification by IdNo ");
-        webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='reference']"), "QA_testing");
+        webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='reference']"), "PersonVerbyIdNO");
         webDriverUtils.clickElement(By.xpath("//*[@id=\"mat-select-value-3\"]/span"));
-        webDriverUtils.clickElement(By.xpath("(//span[@class='mat-option-text'])[1]"));
+        webDriverUtils.clickElement(By.xpath("//span[text()=' Person Verification ']"));
 
         webDriverUtils.clickElement(By.xpath("//div[@class='mat-form-field-infix ng-tns-c46-34']"));
-        webDriverUtils.clickElement(By.xpath("//span[text()=' Name ']"));
+        webDriverUtils.clickElement(By.xpath("//span[text()=' ID Number ']"));
 
 
-        webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='firstname']"),"9808196131087");
+        webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='idnumber']"),"9808196131087");
 
         // terms and conditions checks
         webDriverUtils.checkCheckbox(By.xpath("(//span[@class='mat-checkbox-inner-container'])[1]"));
@@ -192,13 +196,9 @@ public class PersonRecordsPage {
         System.out.println("Performing ID photo verification by name ");
         webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='reference']"), "QA_testing");
         webDriverUtils.clickElement(By.xpath("//*[@id=\"mat-select-value-3\"]/span"));
-        webDriverUtils.clickElement(By.xpath("(//span[@class='mat-option-text'])[1]"));
+        webDriverUtils.clickElement(By.xpath("//span[text()=' ID Photo Verification ']"));
 
-        webDriverUtils.clickElement(By.xpath("//div[@class='mat-form-field-infix ng-tns-c46-34']"));
-        webDriverUtils.clickElement(By.xpath("//span[text()=' Name ']"));
-
-
-        webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='firstname']"),"9808196131087");
+        webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='idnumber']"),"9808196131087");
 
         // terms and conditions checks
         webDriverUtils.checkCheckbox(By.xpath("(//span[@class='mat-checkbox-inner-container'])[1]"));
