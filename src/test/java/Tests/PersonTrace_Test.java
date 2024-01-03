@@ -5,33 +5,47 @@ import pages.LoginPage;
 import pages.PersonRecordsPage;
 import utilities.BaseTest;
 
-public class PersonTraceTest extends BaseTest {
+public class PersonTrace_Test extends BaseTest {
     PersonRecordsPage personRecordsPage;
     LoginPage loginPage;
 
-    public PersonTraceTest() throws Exception {
+    public PersonTrace_Test() throws Exception {
         super();
 
         loginPage = new LoginPage();
-        personRecordsPage = new PersonRecordsPage();
+
     }
 
     // Testing the person trace by Name
-
-    @Test(description = "Logging with username and password")
+    @Test
     public void Login() {
         String email = "raymond@kto.co.za";
         String password = "dEv@12345";
         loginPage.Login(email, password);
+        personRecordsPage = new PersonRecordsPage();
     }
 
-    @Test(description = "Performing person trace searches")
+    @Test
     public void PersonRecords() {
+
         personRecordsPage.personTrace();
     }
 
-    @Test(description = "Performing person trace by NAME")
-    public void PersonTracebyName() {
-        personRecordsPage.personTracebyName();
+//    @Test
+//    public void PersonTracebyName() {
+//
+//        personRecordsPage.personTracebyName();
+//    }
+
+//    @Test
+//    public void PersonTracebyIdNo(){
+//        personRecordsPage.personTracebyID();
+//    }
+
+    @Test
+    public void PersonTracebyContactNo(){
+        personRecordsPage.personTracebyContactNo();
     }
+
+
 }

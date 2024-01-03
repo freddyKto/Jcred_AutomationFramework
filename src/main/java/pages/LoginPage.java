@@ -16,6 +16,7 @@ public class LoginPage extends BaseTest {
         emailInput.sendKeys(email);
         passwordInput.sendKeys(password);
         loginButton.click();
+        System.out.println("Logging with username and password");
     }
 
 

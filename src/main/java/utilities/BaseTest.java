@@ -22,7 +22,8 @@ public class BaseTest {
 
 
          @BeforeClass(alwaysRun=true)
-         public void launchApplication(){
+         public void launching_application(){
+             System.out.println("Setting up the WebDriver and launching the application...");
              driver = DriverManager.getDriver("chrome");
              landingPage = new LandingPage(driver);
              landingPage.goTo();
@@ -30,11 +31,12 @@ public class BaseTest {
 
          @AfterClass(alwaysRun=true)
          public void tearDownMain() {
-
-//           DriverManager.closeDriver();
+             System.out.println("Tearing down the WebDriver and closing the application...");
+            // DriverManager.closeDriver();
          }
 
     public String getScreenshot(String testCaseName, WebDriver driver) throws IOException {
+            System.out.println("Capturing screenshot for test: " + testCaseName);
             TakesScreenshot ts = (TakesScreenshot) driver;
             File source = ts.getScreenshotAs(OutputType.FILE);
             File file = new File(System.getProperty("user.dir") + "//reports//" + testCaseName + ".png");
