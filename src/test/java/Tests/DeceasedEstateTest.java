@@ -24,9 +24,9 @@ public class DeceasedEstateTest extends BaseTest {
         deceasedEstatePage = new DeceasedEstatePage();
     }
 
-    @Test
-    public void DeceasedEstate(){
 
-        deceasedEstatePage.DeceasedEstate();
+    @Test
+    public void PersonRecords() {
+        deceasedEstatePage.deceasedEstate();
     }
 }

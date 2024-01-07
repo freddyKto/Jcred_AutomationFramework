@@ -1,10 +1,11 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.testng.annotations.Listeners;
 import utils.Utils;
 import static utilities.BaseTest.driver;
 
-
+@Listeners(utilities.Listeners.class)
 public class PersonRecordsPage {
 
     Utils webDriverUtils;
@@ -22,8 +23,9 @@ public class PersonRecordsPage {
         public void personTracebyName () {
 
 
-            System.out.println("Performing person trace by name ");
+            logStep("Entering reference: PersonTracebyName");
             webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='reference']"), "PersonTracebyName");
+
             webDriverUtils.clickElement(By.xpath("//*[@id=\"mat-select-value-3\"]/span"));
             webDriverUtils.clickElement(By.xpath("(//span[@class='mat-option-text'])[1]"));
 
@@ -213,6 +215,11 @@ public class PersonRecordsPage {
         // Perform search
         webDriverUtils.clickElement(By.xpath("//span[text()=' Perform Search ']"));
     }
+
+    private void logStep(String message) {
+        System.out.println("Step: " + message);
+    }
+
 }
 
 

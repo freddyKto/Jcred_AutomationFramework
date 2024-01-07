@@ -57,7 +57,7 @@ public class Person_traceTest extends BaseTest {
 //    }
 
     @Test
-    public void PersonVerificationbyId(){
+    public void photoVerificationbyId(){
         personRecordsPage.IdPhoto_verification();
     }
 
