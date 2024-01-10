@@ -25,7 +25,7 @@ public class DeceasedEstatePage {
         webDriverUtils.clickElement(By.xpath("//span[text()=' Name ']"));
 
         webDriverUtils.sendKeys(By.cssSelector("input[name='firstName']"), "RUDOLPH DENNIS");
-        webDriverUtils.sendKeys(By.cssSelector("input[name='surname']"), "THOBEJANE");
+        webDriverUtils.sendKeys(By.cssSelector("input[name='surname']"), "");
         webDriverUtils.clickElement(By.xpath("//button[@type='submit']"));
 //        webDriverUtils.clickElement(By.xpath(""));
 
@@ -37,7 +37,7 @@ public class DeceasedEstatePage {
         webDriverUtils.clickElement(By.xpath("//*[@id=\"mat-select-value-3\"]/span"));
         webDriverUtils.clickElement(By.xpath("//span[text()=' ID Number ']"));
 
-        webDriverUtils.sendKeys(By.xpath("//*[@id=\"mat-input-4\"]"), "6503315524089");
+        webDriverUtils.sendKeys(By.xpath("//*[@id=\"mat-input-4\"]"), "");
         webDriverUtils.clickElement(By.xpath("//button[@type='submit']"));
 
     }
@@ -47,7 +47,7 @@ public class DeceasedEstatePage {
         webDriverUtils.clickElement(By.xpath("//*[@id=\"mat-select-value-3\"]/span"));
         webDriverUtils.clickElement(By.xpath("//span[text()=' Information ID ']"));
 
-        webDriverUtils.sendKeys(By.xpath("//*[@id=\"mat-input-2\"]"), "1565943");
+        webDriverUtils.sendKeys(By.xpath("//*[@id=\"mat-input-2\"]"), "");
 
         webDriverUtils.clickElement(By.xpath("//button[@type='submit']"));
 

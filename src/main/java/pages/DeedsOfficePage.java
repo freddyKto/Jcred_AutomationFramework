@@ -25,9 +25,9 @@ public class DeedsOfficePage {
         webDriverUtils.clickElement(By.xpath("//mat-label[text()='Search Parameters']"));
         webDriverUtils.clickElement(By.xpath("//span[text()=' Deeds Office Person ']"));
 
-        webDriverUtils.sendKeys(By.name("form.Surname"), " Rangata ");
-        webDriverUtils.sendKeys(By.name("form.Firstname"), "Thoriso");
-        webDriverUtils.sendKeys(By.name("form.IDNumber"), "9303195109086");
+        webDriverUtils.sendKeys(By.name("form.Surname"), " ");
+        webDriverUtils.sendKeys(By.name("form.Firstname"), "");
+        webDriverUtils.sendKeys(By.name("form.IDNumber"), "");
 
 
     }

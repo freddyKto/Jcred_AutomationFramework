@@ -32,10 +32,10 @@ public class PersonRecordsPage {
             webDriverUtils.clickElement(By.xpath("//div[@class='mat-form-field-infix ng-tns-c46-34']"));
             webDriverUtils.clickElement(By.xpath("//span[text()=' Name ']"));
 
-            webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='firstname']"),"Freddy");
-            webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='surname']"),"Konyane");
-            webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='age']"),"25");
-            webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='year']"),"1998");
+            webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='firstname']"),"");
+            webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='surname']"),"");
+            webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='age']"),"");
+            webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='year']"),"");
 
             // terms and conditions checks
             webDriverUtils.checkCheckbox(By.xpath("(//span[@class='mat-checkbox-inner-container'])[1]"));
@@ -64,7 +64,7 @@ public class PersonRecordsPage {
         webDriverUtils.clickElement(By.xpath("//span[text()=' ID Number ']"));
 
 
-        webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='idnumber']"),"9808196131087");
+        webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='idnumber']"),"");
 
         // terms and conditions checks
         webDriverUtils.checkCheckbox(By.xpath("(//span[@class='mat-checkbox-inner-container'])[1]"));
@@ -92,7 +92,7 @@ public class PersonRecordsPage {
         webDriverUtils.clickElement(By.xpath("//span[text()=' Name ']"));
 
 
-        webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='firstname']"),"9883297437393");
+        webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='firstname']"),"");
 
         // terms and conditions checks
         webDriverUtils.checkCheckbox(By.xpath("(//span[@class='mat-checkbox-inner-container'])[1]"));
@@ -120,7 +120,7 @@ public class PersonRecordsPage {
         webDriverUtils.clickElement(By.xpath("//span[text()=' Contact Number ']"));
 
 
-        webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='contactNumber']"),"0722717331");
+        webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='contactNumber']"),"");
 
         // terms and conditions checks
         webDriverUtils.checkCheckbox(By.xpath("(//span[@class='mat-checkbox-inner-container'])[1]"));
@@ -147,8 +147,8 @@ public class PersonRecordsPage {
         webDriverUtils.clickElement(By.xpath("//span[text()=' Name ']"));
 
 
-        webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='firstname']"),"Thoriso");
-        webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='surname']"),"rangata");
+        webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='firstname']"),"");
+        webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='surname']"),"");
 
         // terms and conditions checks
         webDriverUtils.checkCheckbox(By.xpath("(//span[@class='mat-checkbox-inner-container'])[1]"));
@@ -178,7 +178,7 @@ public class PersonRecordsPage {
         webDriverUtils.clickElement(By.xpath("//span[text()=' ID Number ']"));
 
 
-        webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='idnumber']"),"9808196131087");
+        webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='idnumber']"),"");
 
         // terms and conditions checks
         webDriverUtils.checkCheckbox(By.xpath("(//span[@class='mat-checkbox-inner-container'])[1]"));
@@ -200,7 +200,7 @@ public class PersonRecordsPage {
         webDriverUtils.clickElement(By.xpath("//*[@id=\"mat-select-value-3\"]/span"));
         webDriverUtils.clickElement(By.xpath("//span[text()=' ID Photo Verification ']"));
 
-        webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='idnumber']"),"9808196131087");
+        webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='idnumber']"),"");
 
         // terms and conditions checks
         webDriverUtils.checkCheckbox(By.xpath("(//span[@class='mat-checkbox-inner-container'])[1]"));
