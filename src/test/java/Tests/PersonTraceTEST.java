@@ -5,11 +5,11 @@ import pages.LoginPage;
 import pages.PersonRecordsPage;
 import utilities.BaseTest;
 
-public class PersonTrace extends BaseTest {
+public class PersonTraceTEST extends BaseTest {
     PersonRecordsPage personRecordsPage;
     LoginPage loginPage;
 
-    public PersonTrace()  {
+    public PersonTraceTEST()  {
         super();
 
         loginPage = new LoginPage();

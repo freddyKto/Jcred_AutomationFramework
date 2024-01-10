@@ -5,11 +5,11 @@ import pages.DeceasedEstatePage;
 import pages.LoginPage;
 import utilities.BaseTest;
 
-public class DeceasedEstate extends BaseTest {
+public class DeceasedEstateTEST extends BaseTest {
     DeceasedEstatePage deceasedEstatePage;
     LoginPage loginPage;
 
-    public DeceasedEstate(){
+    public DeceasedEstateTEST(){
         super();
 
         loginPage = new LoginPage();

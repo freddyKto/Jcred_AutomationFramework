@@ -5,11 +5,11 @@ import pages.CompanyPage;
 import pages.LoginPage;
 import utilities.BaseTest;
 
-public class CIPC_Company extends BaseTest {
+public class CIPC_CompanyTEST extends BaseTest {
 
     LoginPage loginPage;
     CompanyPage companyPage;
-    public CIPC_Company(){
+    public CIPC_CompanyTEST(){
         super();
 
         loginPage = new LoginPage();
