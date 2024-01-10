@@ -32,7 +32,7 @@ public class BaseTest {
          @AfterClass(alwaysRun=true)
          public void tearDownMain() {
              System.out.println("Tearing down the WebDriver and closing the application...");
-            // DriverManager.closeDriver();
+//            DriverManager.closeDriver();
          }
 
     public String getScreenshot(String testCaseName, WebDriver driver) throws IOException {

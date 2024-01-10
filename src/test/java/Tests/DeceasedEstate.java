@@ -5,11 +5,11 @@ import pages.DeceasedEstatePage;
 import pages.LoginPage;
 import utilities.BaseTest;
 
-public class DeceasedEstateTest extends BaseTest {
+public class DeceasedEstate extends BaseTest {
     DeceasedEstatePage deceasedEstatePage;
     LoginPage loginPage;
 
-    public DeceasedEstateTest(){
+    public DeceasedEstate(){
         super();
 
         loginPage = new LoginPage();
@@ -24,9 +24,26 @@ public class DeceasedEstateTest extends BaseTest {
         deceasedEstatePage = new DeceasedEstatePage();
     }
 
-
     @Test
     public void PersonRecords() {
         deceasedEstatePage.deceasedEstate();
+    }
+
+//    @Test
+//    public void deceasedEstatebyName(){
+//
+//        deceasedEstatePage.deceasedEstatebyName();
+//    }
+
+//    @Test
+//    public void deceasedEstatebyIdNumber(){
+//
+//        deceasedEstatePage.deceasedEstatebyIdNumber();
+//    }
+
+    @Test
+    public void deceasedEstatebyInformationID(){
+
+        deceasedEstatePage.deceasedEstatebyInformationID();
     }
 }
