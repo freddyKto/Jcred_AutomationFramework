@@ -1,17 +1,16 @@
 package PageObjects;
 
 import org.openqa.selenium.By;
-import org.testng.annotations.Listeners;
-import utils.Utils;
+import AbstractComponent.AbstractComponent;
 import static utilities.BaseTest.driver;
 
-@Listeners(utilities.Listeners.class)
+
 public class PersonRecordsPage {
 
-    Utils webDriverUtils;
+    AbstractComponent webDriverUtils;
 
     public PersonRecordsPage() {
-        this.webDriverUtils = new Utils(driver);
+        this.webDriverUtils = new AbstractComponent(driver);
     }
     public void personTrace() {
         System.out.println("Person trace search");
@@ -23,19 +22,18 @@ public class PersonRecordsPage {
         public void personTracebyName () {
 
 
-            logStep("Entering reference: PersonTracebyName");
+            System.out.println("Performing person trace by name ");
             webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='reference']"), "PersonTracebyName");
-
             webDriverUtils.clickElement(By.xpath("//*[@id=\"mat-select-value-3\"]/span"));
             webDriverUtils.clickElement(By.xpath("(//span[@class='mat-option-text'])[1]"));
 
             webDriverUtils.clickElement(By.xpath("//div[@class='mat-form-field-infix ng-tns-c46-34']"));
             webDriverUtils.clickElement(By.xpath("//span[text()=' Name ']"));
 
-            webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='firstname']"),"");
-            webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='surname']"),"");
-            webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='age']"),"");
-            webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='year']"),"");
+            webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='firstname']"),"Freddy");
+            webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='surname']"),"Konyane");
+            webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='age']"),"25");
+            webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='year']"),"1998");
 
             // terms and conditions checks
             webDriverUtils.checkCheckbox(By.xpath("(//span[@class='mat-checkbox-inner-container'])[1]"));
@@ -64,7 +62,7 @@ public class PersonRecordsPage {
         webDriverUtils.clickElement(By.xpath("//span[text()=' ID Number ']"));
 
 
-        webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='idnumber']"),"");
+        webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='idnumber']"),"9808196131087");
 
         // terms and conditions checks
         webDriverUtils.checkCheckbox(By.xpath("(//span[@class='mat-checkbox-inner-container'])[1]"));
@@ -92,7 +90,7 @@ public class PersonRecordsPage {
         webDriverUtils.clickElement(By.xpath("//span[text()=' Name ']"));
 
 
-        webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='firstname']"),"");
+        webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='firstname']"),"9883297437393");
 
         // terms and conditions checks
         webDriverUtils.checkCheckbox(By.xpath("(//span[@class='mat-checkbox-inner-container'])[1]"));
@@ -120,7 +118,7 @@ public class PersonRecordsPage {
         webDriverUtils.clickElement(By.xpath("//span[text()=' Contact Number ']"));
 
 
-        webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='contactNumber']"),"");
+        webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='contactNumber']"),"0722717331");
 
         // terms and conditions checks
         webDriverUtils.checkCheckbox(By.xpath("(//span[@class='mat-checkbox-inner-container'])[1]"));
@@ -147,8 +145,8 @@ public class PersonRecordsPage {
         webDriverUtils.clickElement(By.xpath("//span[text()=' Name ']"));
 
 
-        webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='firstname']"),"");
-        webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='surname']"),"");
+        webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='firstname']"),"Thoriso");
+        webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='surname']"),"rangata");
 
         // terms and conditions checks
         webDriverUtils.checkCheckbox(By.xpath("(//span[@class='mat-checkbox-inner-container'])[1]"));
@@ -178,7 +176,7 @@ public class PersonRecordsPage {
         webDriverUtils.clickElement(By.xpath("//span[text()=' ID Number ']"));
 
 
-        webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='idnumber']"),"");
+        webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='idnumber']"),"9808196131087");
 
         // terms and conditions checks
         webDriverUtils.checkCheckbox(By.xpath("(//span[@class='mat-checkbox-inner-container'])[1]"));
@@ -200,7 +198,7 @@ public class PersonRecordsPage {
         webDriverUtils.clickElement(By.xpath("//*[@id=\"mat-select-value-3\"]/span"));
         webDriverUtils.clickElement(By.xpath("//span[text()=' ID Photo Verification ']"));
 
-        webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='idnumber']"),"");
+        webDriverUtils.sendKeys(By.xpath("//input[@formcontrolname='idnumber']"),"9808196131087");
 
         // terms and conditions checks
         webDriverUtils.checkCheckbox(By.xpath("(//span[@class='mat-checkbox-inner-container'])[1]"));
@@ -215,11 +213,6 @@ public class PersonRecordsPage {
         // Perform search
         webDriverUtils.clickElement(By.xpath("//span[text()=' Perform Search ']"));
     }
-
-    private void logStep(String message) {
-        System.out.println("Step: " + message);
-    }
-
 }
 
 

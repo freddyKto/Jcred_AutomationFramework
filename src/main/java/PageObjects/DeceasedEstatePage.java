@@ -1,15 +1,14 @@
 package PageObjects;
 
+import AbstractComponent.AbstractComponent;
 import org.openqa.selenium.By;
-import utils.Utils;
 import static utilities.BaseTest.driver;
-
 public class DeceasedEstatePage {
 
-    Utils webDriverUtils;
+    AbstractComponent webDriverUtils;
 
     public DeceasedEstatePage() {
-        this.webDriverUtils = new Utils(driver);
+        this.webDriverUtils = new AbstractComponent(driver);
     }
     public void deceasedEstate() {
         System.out.println("Deceased Estate search");

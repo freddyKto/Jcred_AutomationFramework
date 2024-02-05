@@ -1,15 +1,16 @@
 package Tests;
 
-import org.testng.annotations.Test;
 import PageObjects.CompanyPage;
 import PageObjects.LoginPage;
+import org.testng.annotations.Test;
 import utilities.BaseTest;
 
-public class CIPC_CompanyTEST extends BaseTest {
+public class CIPC_CompanyTest extends BaseTest {
 
     LoginPage loginPage;
     CompanyPage companyPage;
-    public CIPC_CompanyTEST(){
+
+    public CIPC_CompanyTest(){
         super();
 
         loginPage = new LoginPage();

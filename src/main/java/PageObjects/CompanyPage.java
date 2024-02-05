@@ -1,16 +1,15 @@
 package PageObjects;
 
+import AbstractComponent.AbstractComponent;
 import org.openqa.selenium.By;
-import utils.Utils;
-
 import static utilities.BaseTest.driver;
 
 public class CompanyPage {
 
-    Utils webDriverUtils;
+    AbstractComponent webDriverUtils;
 
     public CompanyPage() {
-        this.webDriverUtils = new Utils(driver);
+        this.webDriverUtils = new AbstractComponent(driver);
     }
     public void cipc_company() {
         System.out.println("company search");

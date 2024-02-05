@@ -1,16 +1,16 @@
 package PageObjects;
 
-import org.openqa.selenium.By;
-import utils.Utils;
 
+import AbstractComponent.AbstractComponent;
+import org.openqa.selenium.By;
 import static utilities.BaseTest.driver;
 
 public class DeedsOfficePage {
 
-    Utils webDriverUtils;
+    AbstractComponent webDriverUtils;
 
     public DeedsOfficePage() {
-        this.webDriverUtils = new Utils(driver);
+        this.webDriverUtils = new AbstractComponent(driver);
     }
     public void deedsOffice() {
         System.out.println("Deeds office search");

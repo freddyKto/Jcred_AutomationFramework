@@ -6,9 +6,9 @@ import PageObjects.LoginPage;
 
 
 
-public class LoginTEST extends BaseTest {
+public class LoginTest extends BaseTest {
          LoginPage loginPage;
-         public LoginTEST() {
+         public LoginTest() {
         super();
         loginPage = new LoginPage();
          }
