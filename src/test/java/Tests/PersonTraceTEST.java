@@ -1,8 +1,8 @@
 package Tests;
 
 import org.testng.annotations.Test;
-import pages.LoginPage;
-import pages.PersonRecordsPage;
+import PageObjects.LoginPage;
+import PageObjects.PersonRecordsPage;
 import utilities.BaseTest;
 
 public class PersonTraceTEST extends BaseTest {

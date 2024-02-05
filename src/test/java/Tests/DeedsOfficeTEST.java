@@ -1,8 +1,8 @@
 package Tests;
 
 import org.testng.annotations.Test;
-import pages.LoginPage;
-import pages.DeedsOfficePage;
+import PageObjects.LoginPage;
+import PageObjects.DeedsOfficePage;
 import utilities.BaseTest;
 
 public class DeedsOfficeTEST extends BaseTest {

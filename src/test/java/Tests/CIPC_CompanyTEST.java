@@ -1,8 +1,8 @@
 package Tests;
 
 import org.testng.annotations.Test;
-import pages.CompanyPage;
-import pages.LoginPage;
+import PageObjects.CompanyPage;
+import PageObjects.LoginPage;
 import utilities.BaseTest;
 
 public class CIPC_CompanyTEST extends BaseTest {

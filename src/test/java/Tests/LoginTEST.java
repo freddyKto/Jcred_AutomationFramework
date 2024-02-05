@@ -2,7 +2,7 @@ package Tests;
 
 import utilities.BaseTest;
 import org.testng.annotations.Test;
-import pages.LoginPage;
+import PageObjects.LoginPage;
 
 
 

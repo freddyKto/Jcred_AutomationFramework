@@ -1,6 +1,5 @@
-package pages;
+package PageObjects;
 
-import org.openqa.selenium.By;
 import utilities.BaseTest;
 
 public class SignupPage extends BaseTest {

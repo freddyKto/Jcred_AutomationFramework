@@ -1,4 +1,4 @@
-package pages;
+package PageObjects;
 
 public class Documents {
 }

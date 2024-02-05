@@ -7,7 +7,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
-import pages.LandingPage;
+import PageObjects.LandingPage;
 
 import java.io.File;
 import java.io.IOException;

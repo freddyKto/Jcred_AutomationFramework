@@ -1,8 +1,8 @@
 package Tests;
 
 import org.testng.annotations.Test;
-import pages.DeceasedEstatePage;
-import pages.LoginPage;
+import PageObjects.DeceasedEstatePage;
+import PageObjects.LoginPage;
 import utilities.BaseTest;
 
 public class DeceasedEstateTEST extends BaseTest {
